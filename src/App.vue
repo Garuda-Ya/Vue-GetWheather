@@ -74,7 +74,7 @@ export default{
         color:black;
         border: 1px solid seagreen;
         font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        margin-top: 50px;
+        margin-top: 40px;
 
         box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
     input{
