@@ -28,7 +28,7 @@ export default{
     },
     methods:{
         getWeather(){
-            axios.get(`https://api.openweathermap.org/geo/1.0/direct?q=${this.city}&limit=1&appid=db51f087327a0d83932e3647ba6b5035`)
+            axios.get(`https://api.openweathermap.org/geo/1.0/direct?q=${this.city}&limit=1&appid={your openweather token}`)
             .then(res => {
                 let coordinates = {}
                 res = res.data[0]
@@ -36,7 +36,7 @@ export default{
                 coordinates["lon"] = res["lon"]
                 return coordinates
             }).then(coordinates=>{
-                return axios.get(`https://api.openweathermap.org/data/2.5/weather?lat=${coordinates.lat}&lon=${coordinates.lon}&units=metric&appid=db51f087327a0d83932e3647ba6b5035`)
+                return axios.get(`https://api.openweathermap.org/data/2.5/weather?lat=${coordinates.lat}&lon=${coordinates.lon}&units=metric&appid={your openweather token}`)
             }).then(answer =>{
                 console.log(answer.data)
                 this.result = answer.data
